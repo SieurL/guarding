@@ -390,6 +390,15 @@ MonoBehaviour:
   shootMinVelocity: 25
   shootMaxVelocity: 100
   shootBufferTime: 0.1
+  gameoverPanelUi: {fileID: 0}
+  sliderLife: {fileID: 0}
+  startLife: 50
+  maxLife: 100
+  regenLifePerSeconds: 1
+  damagePerHit: 10
+  lifePerBonus: 20
+  bonusSpeedDuration: 10
+  bonusSpeedVelocity: 12.5
 --- !u!114 &114716771511745482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -402,6 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentControlsType: 0
+  currentShootType: 1
 --- !u!120 &120945297314822402
 LineRenderer:
   m_ObjectHideFlags: 1

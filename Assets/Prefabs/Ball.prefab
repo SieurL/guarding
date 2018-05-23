@@ -157,7 +157,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!96 &96198831057036254
 TrailRenderer:
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95f8cc6cd759d34690058937a2dd752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceOnWall: 0
 --- !u!135 &135839832818088234
 SphereCollider:
   m_ObjectHideFlags: 1
