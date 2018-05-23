@@ -6,6 +6,9 @@ public class BallBehavior : MonoBehaviour
 {
     public bool bounceOnWall = true;
 
+    public GameObject playerBallMesh;
+    public GameObject enemyBallMesh;
+
     private float _initialVelocity;
     private int _bounceCount;
     private Vector3 _lastFrameVelocity;
@@ -29,6 +32,17 @@ public class BallBehavior : MonoBehaviour
     {
         _initialVelocity = initVel;
         _createByAssist = assist;
+
+        if (tag == "PlayerBall")
+        {
+            if (playerBallMesh != null) playerBallMesh.SetActive(true);
+            if (enemyBallMesh != null) enemyBallMesh.SetActive(false);
+        }
+        else if (tag == "EnemyBall")
+        {
+            if (playerBallMesh != null) playerBallMesh.SetActive(false);
+            if (enemyBallMesh != null) enemyBallMesh.SetActive(true);
+        }
 
         gameObject.tag = tag;
         gameObject.SetActive(true);
