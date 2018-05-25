@@ -196,7 +196,7 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    private void SetLife(float add)
+    public void SetLife(float add)
     {
         _currentLife = Mathf.Clamp(_currentLife + add, 0f, maxLife);
 

@@ -16,6 +16,8 @@ public class PlayerInput : MonoBehaviour
     private float _prevLT;
     private float _prevRT;
 
+	public Animator anim;
+
     private void Awake()
     {
         _player = GetComponent<PlayerBehavior>();
@@ -42,6 +44,11 @@ public class PlayerInput : MonoBehaviour
         float h = (Input.GetKey(KeyCode.Q) ? -1f : 0f) + (Input.GetKey(KeyCode.D) ? 1f : 0f);
         float v = (Input.GetKey(KeyCode.Z) ? 1f : 0f) + (Input.GetKey(KeyCode.S) ? -1f : 0f);
         _player.SetMoveValue(h, v);
+
+		if (Input.GetKey (KeyCode.Q) || Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.Z) || Input.GetKey (KeyCode.S))
+			anim.SetBool ("ismoving", true);
+		else 
+			anim.SetBool ("ismoving", false);
 
         _player.SetRunValue(Input.GetKey(KeyCode.LeftShift));
 
